@@ -1,7 +1,9 @@
-  <h2>Add a new movie</h2>
-  <%= simple_form_for [ @list, @bookmark ] do |f| %>
-    <%= f.input :comment, placeholder: 'Add your comment' %>
-    <%= f.association :movie %>
-    <%= f.submit "Add movie", class: "btn btn-primary" %>
-  <% end %>
-  <%= link_to "Back to lists", lists_path %>
+  <div class="container">
+      <h2>Add a new movie</h2>
+    <%= simple_form_for [ @list, @bookmark ] do |f| %>
+      <%= f.input :comment, placeholder: 'Add your comment' %>
+      <%= f.association :movie %>
+      <%= f.submit "Add movie", class: "btn btn-primary" %>
+    <% end %>
+    <%= link_to "Back to lists", lists_path %>
+  </div>

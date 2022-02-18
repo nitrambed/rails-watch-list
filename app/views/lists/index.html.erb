@@ -2,9 +2,19 @@
     <h1 class="home-title">Watch List Cinema</h1>
 </div>
 
+<div class="container">
+  <h2 class="my-3">Discover all our movies' list</h2>
+  <div class="row">
+    <% @lists.each do |list| %>
+      <div class="card">
+        <div class="card-name">
+          <%= list.name %>
+        </div>
+      </div>
 
-<% @lists.each do |list| %>
-  <%= list.name %>
-  <%= link_to "Visit list", list_path(list)  %>
-<% end %>
-<%= link_to "Create a new list", new_list_path %>
+      <%= link_to "Visit list", list_path(list)  %>
+    <% end %>
+    <%= link_to "Create a new list", new_list_path %>
+  </div>
+
+</div>
