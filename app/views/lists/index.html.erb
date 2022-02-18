@@ -1,0 +1,10 @@
+<div class="home-banner">
+    <h1 class="home-title">Watch List Cinema</h1>
+</div>
+
+
+<% @lists.each do |list| %>
+  <%= list.name %>
+  <%= link_to "Visit list", list_path(list)  %>
+<% end %>
+<%= link_to "Create a new list", new_list_path %>
